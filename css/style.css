@@ -1,0 +1,86 @@
+.contanier{
+    width: 900px;
+    height: 800px;
+    background-color: antiquewhite;
+    position: relative;
+    overflow: hidden;
+
+    
+}
+
+.contanier #ground{
+    width: 2000px;
+    height: 10%;
+    top: 90%;
+    left: 0%;
+    background-color: black;
+    position: absolute;
+
+}
+
+@keyframes ground{
+    0%{left:0%}
+    100%{left: -100%}
+}
+
+.contanier #abyss{
+    position: absolute;
+    width:  8%;
+    height: 15%;
+    background-color: antiquewhite;
+    top: 85%;
+    left: 100%;
+    animation: abyss 5000ms infinite;
+}
+
+@keyframes abyss{
+    0%{left:100%}
+    100%{left: -10%}
+}
+
+
+
+
+
+.contanier #main-char{
+    position: absolute;
+    top: 85%;
+    left: 9px;
+    width: 5%;
+    height: 5%;
+    background-color: aqua;
+    z-index: 1;
+    
+}
+
+.jump{
+    animation: jump 1600ms;
+}
+
+.contanier #target-char{
+    position: absolute;
+    top: 85%;;
+    left: 10%;
+    width: 5%;
+    height: 5%;
+    background-color: red;
+    z-index: 1;
+
+}
+
+@keyframes jump{
+
+    0%{top: 85%;}
+    50%{top: 40%;}
+    100%{top: 85%;}
+}
+
+.lose{
+    animation: lose 500ms;
+}
+
+@keyframes lose{
+    0%{top: 85%;}
+    100%{top: 100%;}
+  
+}
