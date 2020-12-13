@@ -1,4 +1,3 @@
-
 .contanier{ 
     border: 5px solid black;
     margin: auto;
@@ -21,6 +20,10 @@
 
 }
 
+
+
+
+
 .contanier #abyss{
     position: absolute;
     width:  12%;
@@ -40,6 +43,7 @@
 
 
 
+
 .contanier #main-char{
     background-image: url("../img/main-char.png") ;
     position: absolute;
@@ -53,7 +57,6 @@
     
 }
 
-
 @keyframes main_char_moving{
     0%{background-image: url("../img/main-char.png") ;}
     50%{background-image: url("../img/main-char-move.png") ;}
@@ -63,9 +66,14 @@
 @keyframes main-char-jump{
 
     0%{top: 75%;background-image: url("../img/main-char-move.png")}
-    50%{top: 40%;background-image: url("../img/main-char-move.png")}
+    50%{top: 70%;background-image: url("../img/main-char-move.png")}
     100%{top: 75%;background-image: url("../img/main-char-move.png")}
 }
+
+
+
+
+
 
 
 .contanier #target-char{
@@ -73,23 +81,23 @@
     background-repeat: no-repeat;
     position: absolute;
     top: 79%;
-    left: 15%;
+    left: 75%;
     width: 10%;
     height: 15%;
     z-index: 1;
 
 }
 
-.contanier #sensor{
+.contanier #target_sensor_toJump{
 
     width: 12%;
     height: 1%;
-    background-color: red;
     position:absolute;
     top: 89%;
-    left: 30%;
+    left: 87%;
 
 }
+
 
 @keyframes target_char_moving{
     0%{background-image: url("../img/target-char.png") ;}
@@ -101,9 +109,11 @@
 @keyframes target-char-jump{
 
     0%{top: 75%;background-image: url("../img/target-char-move.png")}
-    50%{top: 40%;background-image: url("../img/target-char-move.png")}
+    50%{top: 70%;background-image: url("../img/target-char-move.png")}
     100%{top: 75%;background-image: url("../img/target-char-move.png")}
 }
+
+
 
 
 
@@ -116,3 +126,28 @@
     100%{top: 100%;background-image: url("../img/main-char-move.png")}
   
 }
+
+.contanier #serrated{
+    width: 6%;
+    height: 7%;
+    position:absolute;
+    top: 84%;
+    left: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/circular-serrated.png")
+}
+
+
+@keyframes serrated-rotate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+
+@keyframes serrated-slide{
+
+    0%{left:100%;top:50%}
+    20%{left:60%;top:84%}
+    100%{left: -100%;}
+}
+
