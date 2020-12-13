@@ -1,3 +1,19 @@
+let cant_jump = 0;
+
+// animation of char walking.
+var main_char_moving = "main_char_moving 300ms infinite";
+$( document ).ready(()=>{
+    $("#main-char").css({
+        "animation": `${main_char_moving}`
+    });
+
+    $("#target-char").css({
+        "animation": `target_char_moving 300ms infinite`
+    });
+})
+
+
+
 var abyss_size = 0;
 // Random width of element hole.
 // var abyss_size = setInterval (()=>{
@@ -20,10 +36,11 @@ var abyss_top_distance  = parseInt(abyss.css("top"));
 var abyss_left_distance  = parseInt(abyss.css("left"));
 
 
-if( abyss_left_distance < 9 && abyss_left_distance > 0  &&
+if( abyss_left_distance < 20 && abyss_left_distance > 0  &&
     mainChar_top_distance === abyss_top_distance){
-
-       main_char.addClass("lose");
+       
+       cant_jump =1;
+       main_char.css({"animation": `lose 500ms`});
        clearInterval(endGame)
 
        abyss.css({ "left": `${abyss_left_distance}px` })
@@ -41,26 +58,67 @@ if( abyss_left_distance < 9 && abyss_left_distance > 0  &&
 
 
 
-// function jump() {
-$("body").on('keypress', (evt) => {
-    if (evt.which == 32) {
+// main charater jumping on click (space-bar).
+var main_char_jumpOnSpaceBar =
 
-        $("#main-char").addClass("jump");
+$("body").on('keypress', (evt) => {
+    if (evt.which == 32 && cant_jump === 0) {
+        $("#main-char").css({
+            "animation": `jump 1600ms`
+        })
         setTimeout(()=>{
 
-            $("#main-char").removeClass("jump");
+            $("#main-char").css({
+                "animation": `${main_char_moving}`
+            })
  
             
             }, 1600);
 
 
-            
-
-       
     }
+    
 });
 
 
+//main charater jumping on mouse click also.
+var main_char_jumpOnClick =
+
+$("body").on('click', () => {
+
+        if(cant_jump === 0){
+            $("#main-char").css({ "animation": `jump 1600ms` })
+            setTimeout(()=>{
+    
+                $("#main-char").css({
+                    "animation": `${main_char_moving}`})
+     
+                
+                }, 1600);
+        }
+
+
+
+});
+
+
+
+
+
+
+
+          
+
+     
+// setInterval(()=>{
+    
+//     $("#target-char").addClass("jump");
+//     setTimeout(()=>{
+       
+//      $("#target-char").removeClass("jump"); 
+  
+// },1600);
+// },1600);
 
 
 
