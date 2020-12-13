@@ -80,6 +80,17 @@
 
 }
 
+.contanier #sensor{
+
+    width: 12%;
+    height: 1%;
+    background-color: red;
+    position:absolute;
+    top: 89%;
+    left: 30%;
+
+}
+
 @keyframes target_char_moving{
     0%{background-image: url("../img/target-char.png") ;}
     50%{background-image: url("../img/target-char-move.png") ;}
@@ -89,9 +100,9 @@
 
 @keyframes target-char-jump{
 
-    0%{top: 75%;background-image: url("../img/target-char.png")}
+    0%{top: 75%;background-image: url("../img/target-char-move.png")}
     50%{top: 40%;background-image: url("../img/target-char-move.png")}
-    100%{top: 75%;background-image: url("../img/target-char.png")}
+    100%{top: 75%;background-image: url("../img/target-char-move.png")}
 }
 
 

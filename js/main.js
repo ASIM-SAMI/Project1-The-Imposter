@@ -23,7 +23,24 @@ $( document ).ready(()=>{
 //     abyss_size = $("#abyss").css("width");
     
 // } , 5000);
+function target_sensorForJump(abyss_left_distance,target_char_jump_ones){
 
+if(abyss_left_distance <= 270 && abyss_left_distance >= 108 && target_char_jump_ones === 0){
+  
+    $("#target-char").css({
+        "animation": `target-char-jump 1000ms`})
+        target_char_jump_ones = 1;
+        setTimeout(()=>{
+    
+            $("#target-char").css({
+                "animation": `${target_char_moving}`})
+                target_char_jump_ones = 0;
+            }, 1000);
+    
+
+
+}
+}
 
 function CheckIfCharFaling(lessThan,MoreThan){
 
@@ -37,22 +54,8 @@ var mainChar_top_distance = parseInt(main_char.css("top"));
 var abyss_top_distance  = parseInt(abyss.css("top"));
 var abyss_left_distance  = parseInt(abyss.css("left"));
 var target_char_jump_ones = 0;
-if(abyss_left_distance < 150 && target_char_jump_ones === 0){
-  
-        $("#target-char").css({
-            "animation": `target-char-jump 1000ms`})
-            target_char_jump_ones = 1;
-            setTimeout(()=>{
-        
-                $("#target-char").css({
-                    "animation": `${target_char_moving}`})
-                    target_char_jump_ones = 0;
-                }, 1000);
-        
-    
-    
-}
 
+target_sensorForJump(parseInt(abyss_left_distance),target_char_jump_ones)
 
 if( abyss_left_distance < lessThan && abyss_left_distance > MoreThan  &&
     mainChar_top_distance === abyss_top_distance){
