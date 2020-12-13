@@ -21,11 +21,6 @@
 
 }
 
-@keyframes ground{
-    0%{left:0%}
-    100%{left: -100%}
-}
-
 .contanier #abyss{
     position: absolute;
     width:  12%;
@@ -33,12 +28,12 @@
     background-color: antiquewhite;
     top: 79%;
     left: 100%;
-    animation: abyss 5000ms infinite;
+    animation: abyss 3000ms infinite;
 }
 
 @keyframes abyss{
     0%{left:100%}
-    100%{left: -10%}
+    100%{left: -20%}
 }
 
 
@@ -65,10 +60,16 @@
     100%{background-image: url("../img/main-char.png") ;}
 }
 
+@keyframes main-char-jump{
+
+    0%{top: 75%;background-image: url("../img/main-char-move.png")}
+    50%{top: 40%;background-image: url("../img/main-char-move.png")}
+    100%{top: 75%;background-image: url("../img/main-char-move.png")}
+}
 
 
 .contanier #target-char{
-    background-image: url("../img/main-char.png") ;
+    background-image: url("../img/target-char.png") ;
     background-repeat: no-repeat;
     position: absolute;
     top: 79%;
@@ -86,12 +87,14 @@
 }
 
 
-@keyframes jump{
+@keyframes target-char-jump{
 
-    0%{top: 75%;background-image: url("../img/main-char-move.png")}
-    50%{top: 40%;background-image: url("../img/main-char-move.png")}
-    100%{top: 75%;background-image: url("../img/main-char-move.png")}
+    0%{top: 75%;background-image: url("../img/target-char.png")}
+    50%{top: 40%;background-image: url("../img/target-char-move.png")}
+    100%{top: 75%;background-image: url("../img/target-char.png")}
 }
+
+
 
 .lose{
     animation: lose 500ms;
