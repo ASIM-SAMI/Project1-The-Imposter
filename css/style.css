@@ -1,21 +1,32 @@
+body{
+    background-color: #121212;
+    height: 100vh;
+}
+
 .contanier{ 
     border: 5px solid black;
     margin: auto;
-    width: 900px;
-    height: 800px;
-    background-color: antiquewhite;
+    width: 85%;
+    height: 780px;
+    min-height: 500px;
+    background: white;
     position: relative;
     overflow: hidden;
 
     
 }
 
+
+
+
 .contanier #ground{
-    width: 2000px;
+    width: 100%;
     height: 10%;
+    max-height: 90px;
+    min-height: 90px;
     top: 90%;
     left: 0%;
-    background-color: black;
+    background-color: #121212;
     position: absolute;
 
 }
@@ -28,7 +39,11 @@
     position: absolute;
     width:  12%;
     height: 30%;
-    background-color: antiquewhite;
+    max-width: 108px;
+    min-width: 108px;
+    max-height: 270px;
+    min-height: 270px;
+    background-color: white;
     top: 79%;
     left: 100%;
     animation: abyss 3000ms infinite;
@@ -51,6 +66,10 @@
     left: 1%;
     width: 10%;
     height: 15%;
+    min-width: 90px;
+    min-height: 135px;
+    max-width: 90px;
+    max-height: 135px;
     z-index: 1;
     background-repeat: no-repeat;
    
@@ -84,6 +103,10 @@
     left: 75%;
     width: 10%;
     height: 15%;
+    min-width: 90px;
+    min-height: 135px;
+    max-width: 90px;
+    max-height: 135px;
     z-index: 1;
 
 }
@@ -130,6 +153,10 @@
 .contanier #serrated{
     width: 6%;
     height: 7%;
+    min-width: 54px;
+    min-height: 63px;
+    max-width: 54px;
+    max-height: 63px;
     position:absolute;
     top: 84%;
     left: 100%;
