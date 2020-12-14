@@ -143,28 +143,45 @@ $("body").on('keypress', (evt) => {
 
 $("body").on('click', () => {
 
- if(cant_jump === 0){
 
+if(cant_jump === 0){
            if(double_jump > 0){
-            $("#main-char").css({ "animation": `main-char-double-jump 500ms` })
-
-           }else{
-            $("#main-char").css({ "animation": `main-char-jump 500ms` })
-            double_jump += 1;
-           }
-
-              setTimeout(()=>{
+            cant_jump = 1;
+            $("#main-char").css({ "animation": `` })
+            $("#main-char").css({ "animation": `main-char-double-jump 800ms` })
+            setTimeout(()=>{
     
                 $("#main-char").css({
                     "animation": `${main_char_moving}`})
-                     double_jump = 0;
-                
+                    double_jump = 0;
+                    cant_jump = 0;
+
+                }, 800);
+           }else{
+            $("#main-char").css({ "animation": `main-char-jump 500ms` })
+            double_jump += 1;
+            cant_jump = 1;
+            setTimeout(()=>{
+    
+                $("#main-char").css({
+                    "animation": `${main_char_moving}`})
+                    cant_jump = 0;
                 }, 500);
-           
+
+                setTimeout(()=>{
+                    double_jump = 0;
+                    console.log("double out")
+                }, 1000);
+           }
+
+
+
         }
+           
+      
 });
 
-   
+
            
        
 
