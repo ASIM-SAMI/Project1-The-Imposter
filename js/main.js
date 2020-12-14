@@ -95,7 +95,26 @@ function endTheGame(lessThan,MoreThan,kiled){
                 
                clearInterval(endGame)
                 }
-        },0.0001);
+
+
+                var cont = parseInt($(".contanier").css("height"));
+               var main_char_after_jump = parseInt($("#main-char").css("top"));
+               var main_left_distance = parseInt($("#main-char").css("left"));
+               var box_left_distance = parseInt($("#box").css("left"));
+               var box_top_distance = parseInt($("#box").css("top"));
+
+              
+
+               if(((main_left_distance+100) > box_left_distance) &&
+                 box_left_distance > 0 && 
+                 box_top_distance === main_char_after_jump){
+
+               
+                    $("#box").css("display","none")
+
+
+               }
+               },0.0001);
 
    
     
@@ -205,6 +224,10 @@ if(main_left_distance > serrated && serrated > 0 &&
 
 
 },0.0001);
+
+
+
+
 
 
 

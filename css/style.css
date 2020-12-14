@@ -184,3 +184,19 @@ body{
     100%{left: -100%;}
 }
 
+
+.contanier #box{
+    width: 5%;
+    height: 5%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    background-color: orange;
+    animation:  random-box 10s infinite;
+}
+
+
+@keyframes random-box{
+    0%{left:100%}
+    100%{left: -1%}
+}
