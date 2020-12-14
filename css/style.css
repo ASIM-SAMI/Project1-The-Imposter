@@ -184,19 +184,183 @@ body{
     100%{left: -100%;}
 }
 
-
-.contanier #box{
-    width: 5%;
-    height: 5%;
+.star-min-size{
+    min-width: 48.6px;
+    min-height: 54px;
+}
+.contanier #star{
+    width: 5.4%;
+    height: 6%;
     position: absolute;
     top: 50%;
     left: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/star.png");
+    animation:  random-star 3s infinite;
+}
+
+.contanier #star2{
+    width: 5.4%;
+    height: 6%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/star.png");
+    animation:  random-star2 10s infinite;
+}
+
+.contanier #star3{
+    width: 5.4%;
+    height: 6%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    background-repeat: no-repeat;
+    background-image: url("../img/star.png");
+    animation:  random-star3 15s infinite;
+}
+
+@keyframes random-star{
+    0%{left:100%}
+    100%{left: -6%}
+}
+
+@keyframes random-star2{
+    0%{left:150%}
+    100%{left: -6%}
+}
+
+@keyframes random-star3{
+    0%{left:200%}
+    100%{left: -6%}
+}
+
+.contanier #items{
+
+    width: 10%;
+    height: 30%;
+    background-color: rgba(0, 0, 0,0.3);
+    position:absolute;
+    right: 0%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    min-width: 90px;
+    min-height: 270px;
+}
+
+.contanier #items .item{
+    
+    width: 90%;
+    height: 33%;
     background-color: orange;
-    animation:  random-box 10s infinite;
+    margin: 4% auto;
+    
 }
 
 
-@keyframes random-box{
-    0%{left:100%}
-    100%{left: -1%}
+.contanier .main-char-info{
+    width: 30%;
+    height: 7%;
+    position:absolute;
+    top: 0%;
+    left: 0%;
+    display:grid;
+    grid-template-rows: auto 60%;
+    grid-template-columns: 30% auto;
+    grid-gap: 3%;
+    margin: 1.5% 0.5%;
+    min-width: 220px;
+    min-height: 20px;
+    max-width: 270px;
+    max-height: 63px;
+}
+
+
+.contanier .main-char-info #profile{
+    grid-row: 1 / span 2;
+    background-repeat: no-repeat;
+    background-image: url("../img/main-char-profile.png");
+}
+
+.contanier .main-char-info #hp{
+    display: grid;
+    grid-template-columns: repeat(5 , auto);
+    grid-gap: 2%;
+
+}
+.contanier .main-char-info #stars{
+    display: grid;
+    grid-template-columns: 25% auto;
+    grid-gap: 2%;
+ 
+
+}
+
+.contanier .main-char-info #main-point,#main-point2,
+#main-point3,#main-point4,#main-point5{
+
+    margin-top: 5%;
+    background: linear-gradient(0deg, rgba(0,179,20,1) 0%, rgba(100,203,49,1) 100%);
+
+}
+
+.contanier .main-char-info #stars #stars-icon{
+
+    background-repeat: no-repeat;
+    background-image: url("../img/star-icon.png");
+
+}
+
+.contanier .main-char-info #stars #num-stars{
+
+    margin: 5%;
+    font-size: 1.5em;
+    font-style: bold;
+    
+
+}
+
+
+
+
+
+.contanier .target-char-info{
+    width: 30%;
+    height: 7%;
+    position:absolute;
+    top: 0%;
+    right: 0%;
+    display:grid;
+    grid-template-rows: auto 60%;
+    grid-template-columns: 30% auto;
+    grid-gap: 3%;
+    margin: 1.5% 0.5%;
+    min-width: 220px;
+    min-height: 20px;
+    max-width: 270px;
+    max-height: 63px;
+}
+
+
+.contanier .target-char-info #target-profile{
+    grid-row: 1 / span 2;
+    background-repeat: no-repeat;
+    background-image: url("../img/target-char-profile.png");
+}
+
+.contanier .target-char-info #target-hp{
+    display: grid;
+    grid-template-columns: repeat(5 , auto);
+    grid-gap: 2%;
+
+}
+
+.contanier .target-char-info #target-point,#target-point2,
+#target-point3,#target-point4,#target-point5{
+
+    margin-top: 5%;
+    background: linear-gradient(0deg, rgba(0,179,20,1) 0%, rgba(100,203,49,1) 100%);
+
 }

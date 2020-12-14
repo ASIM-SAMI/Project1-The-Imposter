@@ -1,6 +1,7 @@
-let cant_jump = 0;
-let kiled = 0;
-let double_jump =0;
+var cant_jump = 0;
+var kiled = 0;
+var double_jump =0;
+var total_stars = 0;
 
 // animation of char walking on js load.
 var main_char_moving = "main_char_moving 300ms infinite";
@@ -89,6 +90,14 @@ function endTheGame(lessThan,MoreThan,kiled){
                     main_char.css({ "top": `100%` })
                     abyss.css("animation","none")
                     $("#ground").css("animation","none")
+                    $(".dead").css("display","none")
+
+                        
+                           
+                        
+                        
+                        
+                
                     setTimeout(() =>{
                          alert("You Lose!!"); }, 1000
                          )
@@ -96,24 +105,26 @@ function endTheGame(lessThan,MoreThan,kiled){
                clearInterval(endGame)
                 }
 
-
-                var cont = parseInt($(".contanier").css("height"));
                var main_char_after_jump = parseInt($("#main-char").css("top"));
                var main_left_distance = parseInt($("#main-char").css("left"));
-               var box_left_distance = parseInt($("#box").css("left"));
-               var box_top_distance = parseInt($("#box").css("top"));
-
-              
-
-               if(((main_left_distance+100) > box_left_distance) &&
-                 box_left_distance > 0 && 
-                 box_top_distance === main_char_after_jump){
-
+               var star1_left_distance = parseInt($("#star").css("left"));
+               var star1_top_distance = parseInt($("#star").css("top"));
+               var star2_left_distance = parseInt($("#star2").css("left"));
+               var star2_top_distance = parseInt($("#star2").css("top"));
+               var star3_left_distance = parseInt($("#star3").css("left"));
+               var star3_top_distance = parseInt($("#star3").css("top"));
                
-                    $("#box").css("display","none")
+               collectStars(1,main_char_after_jump,main_left_distance
+                ,star1_left_distance,star1_top_distance)
 
+                collectStars(2,main_char_after_jump,main_left_distance
+                    ,star2_left_distance,star2_top_distance)
 
-               }
+                collectStars(3,main_char_after_jump,main_left_distance
+                        ,star3_left_distance,star3_top_distance)
+                
+                        totalStars()
+                       
                },0.0001);
 
    
@@ -122,11 +133,50 @@ function endTheGame(lessThan,MoreThan,kiled){
    
 }
 
+function collectStars(star,main_char_after_jump,main_left_distance,
+    star_left_distance,star_top_distance){
+    if(((main_left_distance+100) > star_left_distance) &&
+    star_left_distance > 0 && 
+    star_top_distance === main_char_after_jump){
+
+               
+                    switch(star){
+
+                        case 1: $("#star").css("display","none");
+                        total_stars += 1;
+                        reUseStars("star",3000)
+                        break;
+                        case 2: $("#star2").css("display","none");
+                        total_stars += 1;
+                        reUseStars("star1",10000)
+                        break;
+                        case 3: $("#star3").css("display","none");
+                        total_stars += 1;
+                        reUseStars("star3",15000)
+                        break;
+                        default: console.log("Error")
+                    }
+                    
+
+
+               }
+}
+
+
+
 // Check if characters droped in the abyss.End The Game.
 
+function reUseStars(star,timeOfAnimation){
+    setTimeout(() =>{
+        
+        $(`#${star}`).css("display","");
 
+    }, timeOfAnimation)
+}
 
-
+function totalStars(){
+    $("#num-stars").text(total_stars);
+}
 
 endTheGame(20,0,0)
 
