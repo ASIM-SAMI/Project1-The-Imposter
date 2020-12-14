@@ -89,6 +89,12 @@ body{
     100%{top: 75%;background-image: url("../img/main-char-move.png")}
 }
 
+@keyframes main-char-double-jump{
+
+    0%{top: 75%;background-image: url("../img/main-char-move.png")}
+    50%{top: 50%;background-image: url("../img/main-char-move.png")}
+    100%{top: 75%;background-image: url("../img/main-char-move.png")}
+}
 
 
 

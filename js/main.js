@@ -1,5 +1,6 @@
 let cant_jump = 0;
 let kiled = 0;
+let double_jump =0;
 
 // animation of char walking on js load.
 var main_char_moving = "main_char_moving 300ms infinite";
@@ -142,20 +143,30 @@ $("body").on('keypress', (evt) => {
 
 $("body").on('click', () => {
 
-        if(cant_jump === 0){
+ if(cant_jump === 0){
+
+           if(double_jump > 0){
+            $("#main-char").css({ "animation": `main-char-double-jump 500ms` })
+
+           }else{
             $("#main-char").css({ "animation": `main-char-jump 500ms` })
-            setTimeout(()=>{
+            double_jump += 1;
+           }
+
+              setTimeout(()=>{
     
                 $("#main-char").css({
                     "animation": `${main_char_moving}`})
-     
+                     double_jump = 0;
                 
                 }, 500);
+           
         }
-
-
-
 });
+
+   
+           
+       
 
 var main_char_before_jump = parseInt($("#main-char").css("top"));
 
