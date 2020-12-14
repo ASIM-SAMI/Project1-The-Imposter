@@ -79,7 +79,7 @@ function endTheGame(lessThan,MoreThan,kiled){
         
         
             if( (abyss_left_distance < lessThan &&
-                 abyss_left_distance > MoreThan  &&
+                 abyss_left_distance > MoreThan &&
                 mainChar_top_distance === abyss_top_distance)|| kiled == 1){
                    
                     cant_jump =1;

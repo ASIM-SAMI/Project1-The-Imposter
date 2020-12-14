@@ -196,7 +196,7 @@ body{
     left: 100%;
     background-repeat: no-repeat;
     background-image: url("../img/star.png");
-    animation:  random-star 3s infinite;
+    animation:  random-star 6s infinite;
 }
 
 .contanier #star2{
@@ -227,12 +227,12 @@ body{
 }
 
 @keyframes random-star2{
-    0%{left:150%}
+    0%{left:200%}
     100%{left: -6%}
 }
 
 @keyframes random-star3{
-    0%{left:200%}
+    0%{left:250%}
     100%{left: -6%}
 }
 
@@ -240,8 +240,9 @@ body{
 
     width: 10%;
     height: 30%;
-    background-color: rgba(0, 0, 0,0.3);
     position:absolute;
+    max-width: 90px;
+    max-height: 270px;
     right: 0%;
     top: 10%;
     display: flex;
@@ -254,9 +255,29 @@ body{
     
     width: 90%;
     height: 33%;
-    background-color: orange;
     margin: 4% auto;
     
+}
+
+.contanier #items #item1{
+    background-repeat: no-repeat;
+    background-image: url("../img/wooden-box-item1.png");
+    background-color: #CCE3A3;
+
+}
+
+.contanier #items #item2{
+    background-repeat: no-repeat;
+    background-image: url("../img/bar-drop-item2.png");
+    background-color: #FF4E43;
+
+}
+
+.contanier #items #item3{
+    background-repeat: no-repeat;
+    background-image: url("../img/random-item-item3.png");
+    background-color: #FFCF43;
+
 }
 
 
