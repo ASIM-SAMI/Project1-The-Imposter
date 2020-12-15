@@ -71,16 +71,36 @@ function targetDamage(target_left_distance,target_top_distance,
             target_top_distance <= item1_top_distance &&
             80 > ((item1_top_distance/continer_size)*100) ){
         
+                
                 $("#target-char").css("left",`${target_left_distance-100}px`);
-                $("#target-point5").css("display",`none`);
+                
                 damage = 1;
                 target_hp -= 1;
-                console.log(target_hp)
+
+                switch(target_hp){
+
+                    case 4: $("#target-point5").css("display",`none`);
+                    break;
+
+                    case 3: $("#target-point4").css("display",`none`);
+                    break;
+
+                    case 2: $("#target-point3").css("display",`none`);
+                    break;
+
+                    case 1: $("#target-point2").css("display",`none`);
+                    break;
+
+                    case 0: $("#target-point").css("display",`none`);
+                    break;
+                    default: "Error"
+                }
+
                 setTimeout(() =>{
-
+                    
+                    $("#wooden-box").css('animation','none')
                     $("#wooden-box").css("left",`${target_left_distance-100}px`);
-                    $("#wooden-box").css("display",`none`);
-
+                    item1 =0;
                     
                     
 
@@ -319,11 +339,15 @@ if(main_left_distance > serrated && serrated > 0 &&
 
 $("#item1").on('click', () => {
     
+      if(total_stars >= 3){
 
         item1 += 1;
         $("#wooden-box").css({
             'animation': 'wooden-box-drop 3s'
         })
+        total_stars -= 3;
+      }
+        
     
 
     
