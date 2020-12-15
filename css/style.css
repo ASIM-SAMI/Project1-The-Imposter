@@ -421,7 +421,7 @@ body{
     left: 75%;
     background-repeat: no-repeat;
     background-image: url("../img/wooden-box.png");
-    animation: wooden-box-drop 3s infinite;
+    animation: wooden-box-drop 3s;
  
 }
 

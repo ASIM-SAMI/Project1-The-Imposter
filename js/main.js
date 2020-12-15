@@ -2,6 +2,7 @@ var cant_jump = 0;
 var kiled = 0;
 var double_jump =0;
 var total_stars = 0;
+var damage = 0;
 
 // animation of char walking on js load.
 var main_char_moving = "main_char_moving 300ms infinite";
@@ -104,16 +105,41 @@ function endTheGame(lessThan,MoreThan,kiled){
                 
                clearInterval(endGame)
                 }
-
+               var continer_size = parseInt($(".contanier").css("height"));
                var main_char_after_jump = parseInt($("#main-char").css("top"));
                var main_left_distance = parseInt($("#main-char").css("left"));
+               var target_left_distance = parseInt($("#target-char").css("left"));
+               var target_top_distance = parseInt($("#target-char").css("top"));
                var star1_left_distance = parseInt($("#star").css("left"));
                var star1_top_distance = parseInt($("#star").css("top"));
                var star2_left_distance = parseInt($("#star2").css("left"));
                var star2_top_distance = parseInt($("#star2").css("top"));
                var star3_left_distance = parseInt($("#star3").css("left"));
                var star3_top_distance = parseInt($("#star3").css("top"));
+               var item1_left_distance = parseInt($("#wooden-box").css("left"));
+               var item1_top_distance = parseInt($("#wooden-box").css("top"));
                
+
+               if(damage === 0){
+                if(target_left_distance === item1_left_distance &&
+                    target_top_distance <= item1_top_distance &&
+                    80 > ((item1_top_distance/continer_size)*100) ){
+                
+                        $("#target-char").css("left",`${target_left_distance-100}px`);
+
+                        damage = 1;
+                        setTimeout(() =>{
+
+                            $("#wooden-box").css("left",`${target_left_distance-100}px`);
+                            $("#wooden-box").css("display",`none`);
+
+                        },600)
+
+    
+                    }
+               }
+               
+
                collectStars(1,main_char_after_jump,main_left_distance
                 ,star1_left_distance,star1_top_distance)
 
