@@ -408,26 +408,26 @@ body{
 #target-point3,#target-point4,#target-point5{
 
     margin-top: 5%;
-    background: linear-gradient(0deg, rgba(0,179,20,1) 0%, rgba(100,203,49,1) 100%);
+    background: linear-gradient(0deg, rgba(255,101,101,1) 0%, rgba(203,49,49,1) 100%);
 
 }
 
 .contanier #wooden-box{
-
+    
     width: 9%;
     height: 9%;
     position: absolute;
-    top: 0%;
+    top: -10%;
     left: 75%;
     background-repeat: no-repeat;
     background-image: url("../img/wooden-box.png");
-    animation: wooden-box-drop 3s;
+
  
 }
 
 @keyframes wooden-box-drop{
 
-    0%{top:-6%}
+    0%{top:-10%}
     100%{top: 100%}
 
 }

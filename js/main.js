@@ -3,6 +3,8 @@ var kiled = 0;
 var double_jump =0;
 var total_stars = 0;
 var damage = 0;
+var target_hp = 5;
+var item1 = 0;
 
 // animation of char walking on js load.
 var main_char_moving = "main_char_moving 300ms infinite";
@@ -62,6 +64,34 @@ function target_sensorForJump(abyss_left_distance,target_char_jump_ones){
 }
 }
 
+function targetDamage(target_left_distance,target_top_distance,
+    item1_left_distance,item1_top_distance,continer_size){
+
+        if(target_left_distance === item1_left_distance &&
+            target_top_distance <= item1_top_distance &&
+            80 > ((item1_top_distance/continer_size)*100) ){
+        
+                $("#target-char").css("left",`${target_left_distance-100}px`);
+                $("#target-point5").css("display",`none`);
+                damage = 1;
+                target_hp -= 1;
+                console.log(target_hp)
+                setTimeout(() =>{
+
+                    $("#wooden-box").css("left",`${target_left_distance-100}px`);
+                    $("#wooden-box").css("display",`none`);
+
+                    
+                    
+
+                },600)
+
+
+            }
+     
+       
+}
+
 function endTheGame(lessThan,MoreThan,kiled){
      
 
@@ -119,26 +149,10 @@ function endTheGame(lessThan,MoreThan,kiled){
                var item1_left_distance = parseInt($("#wooden-box").css("left"));
                var item1_top_distance = parseInt($("#wooden-box").css("top"));
                
-
-               if(damage === 0){
-                if(target_left_distance === item1_left_distance &&
-                    target_top_distance <= item1_top_distance &&
-                    80 > ((item1_top_distance/continer_size)*100) ){
-                
-                        $("#target-char").css("left",`${target_left_distance-100}px`);
-
-                        damage = 1;
-                        setTimeout(() =>{
-
-                            $("#wooden-box").css("left",`${target_left_distance-100}px`);
-                            $("#wooden-box").css("display",`none`);
-
-                        },600)
-
-    
-                    }
+               if(item1 === 1){
+               targetDamage(target_left_distance,target_top_distance,
+                item1_left_distance,item1_top_distance,continer_size)
                }
-               
 
                collectStars(1,main_char_after_jump,main_left_distance
                 ,star1_left_distance,star1_top_distance)
@@ -304,8 +318,14 @@ if(main_left_distance > serrated && serrated > 0 &&
 
 
 $("#item1").on('click', () => {
+    
 
-    console.log("item1")
+        item1 += 1;
+        $("#wooden-box").css({
+            'animation': 'wooden-box-drop 3s'
+        })
+    
+
     
     })
 
