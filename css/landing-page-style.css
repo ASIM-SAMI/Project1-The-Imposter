@@ -1,3 +1,8 @@
+:root{
+    margin: 0;
+ 
+}
+
 body{
     background: rgb(0,14,208);
     background: linear-gradient(86deg, rgba(0,14,208,1) 0%, rgba(255,0,0,1) 100%);
@@ -5,14 +10,16 @@ body{
 }
 
 #container{
-
+    display: flex;
+    flex-direction: column;
     width: 80%;
     height: 90vh;
+    max-width: 900px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#container h1,h2{
+#container h1,h2,p{
     text-align: center;
     color:#2FFF57;
 }
@@ -21,6 +28,33 @@ body{
     padding-top: 2%;
 }
 
-P{
+#container p{
+    padding-top: 5%;
+    font-size: 1.1em;
     color:#2FFF57;
+}
+
+#container #imges{
+    
+    width: 80%;
+    height: 40%;
+    max-width: 700px;
+    background-color: white;
+    margin: auto;
+
+}
+
+#container #next-button{
+    background-color: #121212;
+    color: #2FFF57;
+    width: 15%;
+    height: 5%;
+    font-size: 1.5em;
+    margin: auto;
+}
+
+#container #next-button:hover{
+    background-color: #2FFF57;
+    color: #121212;
+    
 }
