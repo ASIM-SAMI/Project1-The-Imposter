@@ -9,11 +9,18 @@ body{
     width: 85%;
     height: 780px;
     min-height: 500px;
-    background: white;
+    background-color: white;
     position: relative;
     overflow: hidden;
-
     
+    
+}
+
+@keyframes target_damage{
+
+    0%{background-color: white;}
+    50%{background-color: red;}
+    100%{background-color: white;}
 }
 
 
@@ -196,7 +203,7 @@ body{
     left: 100%;
     background-repeat: no-repeat;
     background-image: url("../img/star.png");
-    animation:  random-star 6s infinite;
+    animation:  random-star 5s infinite;
 }
 
 .contanier #star2{
@@ -207,7 +214,7 @@ body{
     left: 100%;
     background-repeat: no-repeat;
     background-image: url("../img/star.png");
-    animation:  random-star2 10s infinite;
+    animation:  random-star2 7s infinite;
 }
 
 .contanier #star3{
@@ -218,21 +225,21 @@ body{
     left: 100%;
     background-repeat: no-repeat;
     background-image: url("../img/star.png");
-    animation:  random-star3 15s infinite;
+    animation:  random-star3 8s infinite;
 }
 
 @keyframes random-star{
-    0%{left:100%}
+    0%{left:130%}
     100%{left: -6%}
 }
 
 @keyframes random-star2{
-    0%{left:200%}
+    0%{left:150%}
     100%{left: -6%}
 }
 
 @keyframes random-star3{
-    0%{left:250%}
+    0%{left:180%}
     100%{left: -6%}
 }
 
@@ -426,6 +433,26 @@ body{
 }
 
 @keyframes wooden-box-drop{
+
+    0%{top:-10%}
+    100%{top: 100%}
+
+}
+
+.contanier #bar-drop{
+    
+    width: 9%;
+    height: 9%;
+    position: absolute;
+    top: -10%;
+    left: 75%;
+    background-repeat: no-repeat;
+    background-image: url("../img/bar.png");
+
+ 
+}
+
+@keyframes bar-drop{
 
     0%{top:-10%}
     100%{top: 100%}

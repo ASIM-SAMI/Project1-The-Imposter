@@ -3,6 +3,7 @@ body{
     background: rgb(0,14,208);
     background: linear-gradient(86deg, rgba(0,14,208,1) 0%, rgba(255,0,0,1) 100%);
     font-family: monospace;
+    
 }
 
 #container{
@@ -14,6 +15,8 @@ body{
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
+
 
 #container h1,h2,p{
     text-align: center;
