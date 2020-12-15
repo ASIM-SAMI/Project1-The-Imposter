@@ -7,6 +7,7 @@ var target_hp = 5;
 var item1 = 0;
 var item2 = 0;
 var item3 = 0;
+var cant_click_item_yet = 0;
 
 // animation of char walking on js load.
 var main_char_moving = "main_char_moving 300ms infinite";
@@ -82,7 +83,9 @@ function targetDamage(item,target_left_distance,target_top_distance,
 
                 }
                     
-                
+                if(target_hp < 0){
+                    target_hp = 0;
+                }
 
                 switch(target_hp){
 
@@ -129,6 +132,7 @@ function targetDamage(item,target_left_distance,target_top_distance,
                     item2 =0;
                     item3 =0;
                     left_d = 0;
+                    cant_click_item_yet=0;
                     $(".contanier").css("animation","")
                     
 
@@ -411,8 +415,12 @@ if(main_left_distance > serrated && serrated > 0 &&
 
 
 $("#item1").on('click', () => {
+
     
-      if(total_stars >= 3){
+    
+      if(total_stars >= 3 && cant_click_item_yet === 0){
+
+        cant_click_item_yet = 1;
 
         item1 += 1;
         $("#wooden-box").css({
@@ -428,7 +436,11 @@ $("#item1").on('click', () => {
 
 $("#item2").on('click', () => {
 
-    if(total_stars >= 8){
+    
+
+    if(total_stars >= 8  && cant_click_item_yet === 0){
+
+        cant_click_item_yet = 1;
 
         item2 += 1;
         $("#bar-drop").css({
@@ -442,17 +454,27 @@ $("#item2").on('click', () => {
 })
 
 $("#item3").on('click', () => {
+
+    
+
     if(total_stars >= 5){
+
     var choise = parseInt(Math.random() * (4 - 1) + 1);
     
-    if(choise === 1 || choise === 2){
+    if((choise === 1 || choise === 2)  && cant_click_item_yet === 0){
+
+        cant_click_item_yet = 1;
+
         item1 += 1;
         $("#wooden-box").css({
             'animation': 'wooden-box-drop 3s'
         })
         
 
-    }else{
+    }else if(cant_click_item_yet === 0){
+
+        cant_click_item_yet = 1;
+        
         item2 += 1;
         $("#bar-drop").css({
             'animation': 'bar-drop 3s'
