@@ -210,7 +210,7 @@ $("body").on('keypress', (evt) => {
 //main charater jumping on mouse click also.
 // var main_char_jumpOnClick =
 
-$("body").on('click', () => {
+$(".contanier").on('click', () => {
 
 
 if(cant_jump === 0){
@@ -277,7 +277,23 @@ if(main_left_distance > serrated && serrated > 0 &&
 
 
 
+$("#item1").on('click', () => {
 
+    console.log("item1")
+    
+    })
+
+$("#item2").on('click', () => {
+
+        console.log("item2")
+        
+})
+
+$("#item3").on('click', () => {
+
+    console.log("item3")
+    
+    })
 
 
 
