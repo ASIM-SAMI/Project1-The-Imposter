@@ -8,6 +8,7 @@ if(p_stage === 0){
     $("#back-button").css("display","none")
 }
 
+
 $("#next-button").on("click",()=>{
     
     p_stage += 1;
@@ -16,6 +17,11 @@ $("#next-button").on("click",()=>{
     if(p_stage === 1){
         
         $("#back-button").css("display","")
+        
+    }
+    if(p_stage === 2){
+        
+        $("#next-button").css("display","none")
     }
 })
 
@@ -56,5 +62,16 @@ $("#back-button").on("click",()=>{
 
     p_stage -= 1;
     pExpHowTPStage()
+    $("#next-button").css("display","")
+    if(p_stage === 0){
+        
+        $("#back-button").css("display","none")
+    }
     }
 })  
+
+
+
+$("#start").on("click",(evt)=>{
+    window.location = 'index.html';
+})

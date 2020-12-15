@@ -28,6 +28,7 @@ body{
 
 #container h2{
     animation: color-switch 500ms infinite;
+    padding-bottom: 5%;
 }
 
 @keyframes color-switch{
@@ -85,4 +86,22 @@ body{
     background-color: #2FFF57;
     color: #121212;
     
+}
+
+#container #start{
+
+    width: 10%;
+    height: 8%;
+    margin: auto;
+    border-radius: 50%;
+    background-color:  #121212;
+    color:white;
+    border: 2px solid red;
+
+}
+
+#container #start:hover{
+
+    background-color:  red;
+    color:#121212;
 }
