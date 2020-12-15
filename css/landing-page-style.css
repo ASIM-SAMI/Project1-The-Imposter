@@ -42,7 +42,7 @@ body{
 
 #container p{
     padding-top: 5%;
-    font-size: 1.1em;
+    font-size: 1.3em;
     color:#2FFF57;
 }
 
@@ -53,6 +53,7 @@ body{
     width: 98%;
     height: 40%;
     background-color: white;
+   
 
 
 }
@@ -60,7 +61,6 @@ body{
 #container #contanier-img #imges{
     max-width: 100%;
     max-height: 100%;
-
     flex-grow: 1;
     flex-shrink:5;
     background-image: url("../img/img-ex-click-jump.jpg") ;
