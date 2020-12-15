@@ -22,10 +22,22 @@ body{
 #container h1,h2,p{
     text-align: center;
     color:#2FFF57;
+    
 }
 
 #container h1{
     padding-top: 2%;
+    animation: color-switch 500ms infinite;
+}
+
+#container h2{
+    animation: color-switch 500ms infinite;
+}
+
+@keyframes color-switch{
+    0%{color:#2FFF57;}
+    50%{color:#C70039;}
+    100%{color:#2FFF57;}
 }
 
 #container p{
@@ -34,20 +46,35 @@ body{
     color:#2FFF57;
 }
 
-#container #imges{
-    
-    width: 80%;
-    height: 40%;
-    max-width: 700px;
-    background-color: white;
+#container #contanier-img{
+
     margin: auto;
+    display:flex;
+    width: 98%;
+    height: 40%;
+    background-color: white;
+
 
 }
+
+#container #contanier-img #imges{
+    max-width: 100%;
+    max-height: 100%;
+
+    flex-grow: 1;
+    flex-shrink:5;
+    background-image: url("../img/img-ex-click-jump.jpg") ;
+    background-repeat: no-repeat;
+
+}
+
+
 
 #container #next-button{
     background-color: #121212;
     color: #2FFF57;
     width: 15%;
+    min-width: 100px;
     height: 5%;
     font-size: 1.5em;
     margin: auto;
