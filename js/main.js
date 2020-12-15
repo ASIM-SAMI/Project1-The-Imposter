@@ -66,22 +66,25 @@ function targetDamage(item,target_left_distance,target_top_distance,
                 
                 
                 var left_d = 0;
-                
+                var left_d_presentage = parseInt(((target_left_distance/continer_size)*100))
                 if(item === 1){
                     target_hp -= 1;
-                    left_d = 150;
-                    $("#target-char").css("left",`${target_left_distance-left_d}px`);
+                    left_d = 16;
+                    left_both = left_d_presentage - left_d;
+                    console.log(continer_size)
+                    $("#target-char").css("left",`${left_both}%`);
                     $(".contanier").css("animation","target_damage 20ms")
                 }
                 if(item === 2){
                     target_hp -= 3;
-                    left_d = 300;
-                    $("#target-char").css("left",`${target_left_distance-left_d}px`);
+                    left_d = 43;
+                    left_both = left_d_presentage - left_d;
+
+                    $("#target-char").css("left",`${left_both}%`);
+                    $(".contanier").css("animation","target_damage 20ms")
                 }
 
-                if(item === 3){
 
-                }
                     
                 if(target_hp < 0){
                     target_hp = 0;
@@ -98,7 +101,7 @@ function targetDamage(item,target_left_distance,target_top_distance,
 
                     case 2: $("#target-point3").css("display",`none`);
                     $("#target-point4").css("display",`none`);
-                    $("#target-point2").css("display",`none`);
+                    $("#target-point5").css("display",`none`);
                     
                     break;
 
@@ -122,10 +125,10 @@ function targetDamage(item,target_left_distance,target_top_distance,
                 setTimeout(() =>{
                     
                     $("#wooden-box").css('animation','none')
-                    $("#wooden-box").css("left",`${target_left_distance-left_d}px`);
+                    $("#wooden-box").css("left",`${left_both}%`);
 
                     $("#bar-drop").css('animation','none')
-                    $("#bar-drop").css("left",`${target_left_distance-left_d}px`)
+                    $("#bar-drop").css("left",`${left_both}%`)
 
 
                     item1 =0;
@@ -162,11 +165,9 @@ function endTheGame(lessThan,MoreThan,kiled){
         if(left_d_main_char >= left_d_target_char){
 
             cant_jump =1;
-            main_char.css({"animation": `lose 500ms`});
+            main_char.css({"animation": ``});
             $("#target-char").css({"animation": ``});
             
-            abyss.css({ "left": `${abyss_left_distance}px` })
-            main_char.css({ "top": `100%` })
             abyss.css("animation","none")
             $("#ground").css("animation","none")
             $(".dead").css("display","none")
@@ -220,7 +221,7 @@ function endTheGame(lessThan,MoreThan,kiled){
             
                 }
                var target_sensor_left_d = parseInt($("#target_sensor_toJump").css("left"));
-               var continer_size = parseInt($(".contanier").css("height"));
+               var continer_size = parseInt($(".contanier").css("width"));
                var main_char_after_jump = parseInt($("#main-char").css("top"));
                var main_left_distance = parseInt($("#main-char").css("left"));
                var target_left_distance = parseInt($("#target-char").css("left"));
@@ -474,7 +475,7 @@ $("#item3").on('click', () => {
     }else if(cant_click_item_yet === 0){
 
         cant_click_item_yet = 1;
-        
+
         item2 += 1;
         $("#bar-drop").css({
             'animation': 'bar-drop 3s'
