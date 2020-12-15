@@ -442,8 +442,25 @@ $("#item2").on('click', () => {
 })
 
 $("#item3").on('click', () => {
+    if(total_stars >= 5){
+    var choise = parseInt(Math.random() * (4 - 1) + 1);
+    
+    if(choise === 1 || choise === 2){
+        item1 += 1;
+        $("#wooden-box").css({
+            'animation': 'wooden-box-drop 3s'
+        })
+        
 
-    console.log("item3")
+    }else{
+        item2 += 1;
+        $("#bar-drop").css({
+            'animation': 'bar-drop 3s'
+        })
+
+    }
+    total_stars -= 5;
+}
     
     })
 
