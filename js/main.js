@@ -1,7 +1,7 @@
 var cant_jump = 0;
 var kiled = 0;
 var double_jump =0;
-var total_stars = 48;
+var total_stars = 0;
 var damage = 0;
 var target_hp = 5;
 var item1 = 0;
