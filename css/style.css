@@ -4,7 +4,7 @@ body{
 }
 
 .contanier{ 
-    border: 5px solid black;
+    border: 10px solid#121212;
     margin: auto;
     width: 85%;
     height: 780px;
@@ -13,9 +13,12 @@ body{
     background-color: white;
     position: relative;
     overflow: hidden;
-    
+
     
 }
+
+
+
 
 @keyframes target_damage{
 
@@ -23,7 +26,6 @@ body{
     50%{background-color: red;}
     100%{background-color: white;}
 }
-
 
 
 
@@ -38,9 +40,6 @@ body{
     position: absolute;
 
 }
-
-
-
 
 
 .contanier #abyss{

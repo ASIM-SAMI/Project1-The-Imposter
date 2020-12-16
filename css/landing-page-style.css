@@ -14,6 +14,7 @@ body{
     max-width: 900px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
+
 }
 
 
@@ -53,7 +54,7 @@ body{
     width: 98%;
     height: 40%;
     background-color: white;
-   
+
 
 
 }
@@ -61,6 +62,8 @@ body{
 #container #contanier-img #imges{
     max-width: 100%;
     max-height: 100%;
+    height: 100%;
+    width: 100%;
     flex-grow: 1;
     flex-shrink:5;
     background-image: url("../img/img-ex-click-jump.jpg") ;
