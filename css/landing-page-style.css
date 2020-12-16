@@ -11,7 +11,7 @@ body{
     flex-direction: column;
     width: 80%;
     height: 90vh;
-    max-width: 900px;
+    max-width: 750px;
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
 
