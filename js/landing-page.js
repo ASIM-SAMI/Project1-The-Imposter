@@ -73,5 +73,5 @@ $("#back-button").on("click",()=>{
 
 
 $("#start").on("click",(evt)=>{
-    window.location = 'index.html';
+    window.location = 'index2.html';
 })

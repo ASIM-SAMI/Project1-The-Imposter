@@ -9,6 +9,7 @@ body{
     width: 85%;
     height: 780px;
     min-height: 500px;
+    min-width: 500px;
     background-color: white;
     position: relative;
     overflow: hidden;
@@ -426,6 +427,8 @@ body{
     position: absolute;
     top: -10%;
     left: 75%;
+    min-width: 70px;
+    min-height: 70px;
     background-repeat: no-repeat;
     background-image: url("../img/wooden-box.png");
 
@@ -446,6 +449,8 @@ body{
     position: absolute;
     top: -10%;
     left: 75%;
+    min-width: 70px;
+    min-height: 70px;
     background-repeat: no-repeat;
     background-image: url("../img/bar.png");
 
