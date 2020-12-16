@@ -1,7 +1,7 @@
 var cant_jump = 0;
 var kiled = 0;
 var double_jump =0;
-var total_stars = 0;
+var total_stars = 50;
 var damage = 0;
 var target_hp = 5;
 var item1 = 0;
@@ -179,7 +179,7 @@ function endTheGame(lessThan,MoreThan,kiled){
                 
         
             setTimeout(() =>{
-                 alert("You Win!!"); }, 1000
+                 alert("Great Job!!  You Caught The Imposter. You Won!!"); }, 1000
                  )
         
        clearInterval(endGame)
@@ -214,7 +214,7 @@ function endTheGame(lessThan,MoreThan,kiled){
                         
                 
                     setTimeout(() =>{
-                         alert("You Lose!!"); }, 1000
+                         alert("You Lost!!  The Imposter run a way! :( "); }, 1000
                          )
                 
                clearInterval(endGame)
