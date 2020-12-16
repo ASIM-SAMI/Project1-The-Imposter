@@ -1,7 +1,7 @@
 var cant_jump = 0;
 var kiled = 0;
 var double_jump =0;
-var total_stars = 50;
+var total_stars = 0;
 var damage = 0;
 var target_hp = 5;
 var item1 = 0;
@@ -9,12 +9,14 @@ var item2 = 0;
 var item3 = 0;
 var cant_click_item_yet = 0;
 
+
 // animation of char walking on js load.
 var main_char_moving = "main_char_moving 300ms infinite";
 var target_char_moving = "target_char_moving 300ms infinite";
 var start_serrated_slide = "serrated-slide 6s infinite, serrated-rotate 50ms infinite";
 
 $( document ).ready(()=>{
+
     $("#main-char").css({
         "animation": `${main_char_moving}`
     });

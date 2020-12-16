@@ -3,6 +3,9 @@
 The game about 2 of "Among us" characters. You chasing the imposter!    Catch him to make a win!!
 Collect the stars to buy items by it. Damage the imposter decrease his health and catch him.
 
+[Let's Play!!](https://pages.git.generalassemb.ly/asim-sami/Project1-The-Imposter/index.html)
+
+
 ## WireFrame
 ![alt text](./img/wireframe.jpg)
 
@@ -25,7 +28,7 @@ Collect the stars to buy items by it. Damage the imposter decrease his health an
 
 
 ### Stage 2:
-Working on imges & Icon.
+Working on guide imges & Icon.
 ![alt text](./img/project-stage2.jpg)
 
 
@@ -35,7 +38,7 @@ Landing Page after The project is done:
 ![alt text](./img/project-stage2_3.jpg)
 
 
-GamePlay The project is done:
+GamePlay after the project is done:
 ![alt text](./img/project-stage2_4.jpg)
 
 
@@ -46,6 +49,7 @@ GamePlay The project is done:
 ## Plan To Fix In Future
 * Circular serrated to damage the target.
 * Modify the UI to be better.
+
 
 ## References
 - I Took the main idea of the animation from this youtube video. 

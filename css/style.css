@@ -462,3 +462,14 @@ body{
     100%{top: 100%}
 
 }
+
+.made{
+    width: 40%;
+    height: 5%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color:white;
+    padding-top: 6%;
+    
+}
