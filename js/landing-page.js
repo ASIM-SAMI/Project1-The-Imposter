@@ -38,16 +38,16 @@ function pExpHowTPStage(){
     switch(p_stage){
         case 0:
             pExplainHowTP("How To play:<br><br>One left click on the mouse to jump. after 0.5s click again for double jump.<br><br>",
-            'url("../img/img-ex-click-jump.jpg")')
+            'url("./img/img-ex-click-jump.jpg")')
             break;
         case 1:
          pExplainHowTP("How To play:<br><br>Collect The stars to buy itemes and use it to damage the Imposter!.<br><br>",
-         'url("../img/img-ex-click-stars-itemes.jpg")')
+         'url("./img/img-ex-click-stars-itemes.jpg")')
          break;
          
          case 2: 
          pExplainHowTP("How To play:<br><br>These items You can buy it by stars to damage the Imposter to catch him!!",
-         'url("../img/img-ex-item-damage.jpg")')
+         'url("./img/img-ex-item-damage.jpg")')
          break;
 
 
