@@ -3,6 +3,11 @@
 The game about 2 of "Among us" characters. You chasing the imposter!    Catch him to make a win!!
 Collect the stars to buy items by it. Damage the imposter decrease his health and catch him.
 
+## WireFrame
+![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/wireframe.jpg)
+[URL](https://wireframe.cc/pro/pp/2ff4eff31403383)
+
+
 ## Technologies Used
 * HTML
 * CSS
