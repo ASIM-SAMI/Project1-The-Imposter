@@ -4,7 +4,9 @@ The game about 2 of "Among us" characters. You chasing the imposter!    Catch hi
 Collect the stars to buy items by it. Damage the imposter decrease his health and catch him.
 
 ## WireFrame
-![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/wireframe.jpg)
+![alt text](./img/wireframe.jpg)
+
+
 [URL](https://wireframe.cc/pro/pp/2ff4eff31403383)
 
 
@@ -23,19 +25,19 @@ Collect the stars to buy items by it. Damage the imposter decrease his health an
 
 
 ### Stage 2:
-![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/project-stage2.jpg)
+![alt text](./img/project-stage2.jpg)
 
 
-![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/project-stage2_2.jpg)
+![alt text](./img/project-stage2_2.jpg)
 
 
-![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/project-stage2_3.jpg)
+![alt text](./img/project-stage2_3.jpg)
 
 
-![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/project-stage2_4.jpg)
+![alt text](./img/project-stage2_4.jpg)
 
 ### Items In The Game:
-![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/wooden-box.png)  ![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/bar.png)  ![alt text](https://pages.git.generalassemb.ly/asim-sami/Project1-Among-us-game/img/random-block.png) 
+![alt text](./img/wooden-box.png)  ![alt text](./img/bar.png)  ![alt text](./img/random-block.png) 
 
 
 ## Plan To Fix In Future
