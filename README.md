@@ -18,23 +18,26 @@ Collect the stars to buy items by it. Damage the imposter decrease his health an
 
 ## Project Stages
 ### Stage 1:
-![alt text](https://im4.ezgif.com/tmp/ezgif-4-20e4addb21ed.gif)
+![alt text](./img/project1-under-processing.gif)
 
 
 [Short video gameplay in stage 1](https://www.youtube.com/watch?v=H5VowUeeGxc)
 
 
 ### Stage 2:
+Working on imges & Icon.
 ![alt text](./img/project-stage2.jpg)
 
 
 ![alt text](./img/project-stage2_2.jpg)
 
-
+Landing Page after The project is done:
 ![alt text](./img/project-stage2_3.jpg)
 
 
+GamePlay The project is done:
 ![alt text](./img/project-stage2_4.jpg)
+
 
 ### Items In The Game:
 ![alt text](./img/wooden-box.png)  ![alt text](./img/bar.png)  ![alt text](./img/random-block.png) 
@@ -44,6 +47,9 @@ Collect the stars to buy items by it. Damage the imposter decrease his health an
 * Circular serrated to damage the target.
 * Modify the UI to be better.
 
+## References
+- I Took the main idea of the animation from this youtube video. 
+[URL](https://www.youtube.com/watch?v=3SsYZDJdeXk)
 
 
 
